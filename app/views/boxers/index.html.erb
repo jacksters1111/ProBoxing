@@ -1,0 +1,10 @@
+<h3><span class="red" id="boxers">Boxers</span></h3>
+<div id="images">
+    <% @boxers.each do |boxer| %>
+        <%= link_to boxer_path(boxer), class: "boxer" do %>
+            <img src="<%= boxer.image_url %>">
+            <h4><%= boxer.name %></h4>
+        <% end %>
+    <% end %>
+</div>
+

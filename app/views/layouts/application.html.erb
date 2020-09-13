@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pro Boxing</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  </head>
+
+  <body>
+    <p>
+      <% if current_user %>
+        Welcome, <%= current_user.name %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a><%= link_to 'Log Out', session_path('dummy'), method: :delete %></a>
+      <% else %>
+        <a><%= link_to 'Log In', login_path %></a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a><%= link_to 'Sign Up', new_user_path %></a>
+      <% end %>
+    </p>
+    <header>
+      <h1><span class="pro">Pro</span><span class="boxing">Boxing</span></h1>
+      <div class="navbar">
+        <a href="/">Home</a>
+        <% if current_user %>
+          <%= link_to 'Favorites', favorites_path %>
+        <% end %>
+      </div>
+    </header>
+    <%= yield %>
+    <footer><span class="red">Pro</span>Boxing created by Jacqueline Estrada</footer>
+  </body>
+</html>

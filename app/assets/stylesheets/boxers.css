@@ -1,0 +1,42 @@
+p {
+    font-size: 22px;
+}
+
+#images {
+    text-align: center;
+}
+
+img {
+    width: 280px;
+    height: 350px;
+    border: 5px solid white;
+}
+
+h1, #boxers, #favorites {
+    font-size: 40px;
+}
+
+.red {
+    color: red;
+}
+
+img.like-unlike {
+    height: 50px;
+    width: auto;
+    border: none;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.boxer {
+    display: inline-block;
+    margin: 50px;
+}
+
+.image {
+    height: 520px;
+    width: 400px;
+    margin-left: 155px;
+}
